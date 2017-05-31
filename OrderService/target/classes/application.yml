@@ -1,0 +1,34 @@
+
+spring:
+    application:
+        name: Order-service
+    jpa:
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL5Dialect
+        hibernate:
+            ddl-auto: update
+            naming-strategy : org.hibernate.cfg.ImprovedNamingStrategy
+        show-sql: true   
+
+    datasource:
+        url: jdbc:mysql://localhost:3306/sasi?autoReconnect:true&useSSL:false
+        username: root
+        password: root
+
+eureka:
+    client:
+        serviceUrl :
+            defaultZone: http://localhost:1111/eureka
+        
+server:
+    port : 8393
+
+ribbon:
+    http:
+        client:
+            enabled:true    
+    
+mail:
+    email: bsk7ksk@gmail.com
+            
